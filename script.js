@@ -5,6 +5,8 @@ var windspeedElement = document.getElementById("windspeed")
 var uv = document.getElementById("uv")
 var searchBtn = document.querySelector(".search-btn")
 var cityInput = document.querySelector(".cityInput")
+var today = moment();
+$("#date").text(today.format("MMM Do, YYYY"));
 
 function getApi(city) {
   var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial&appid=bcca4d036d363451e0d97d2838d5f8fc';
